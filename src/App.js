@@ -32,8 +32,12 @@ function App() {
     <div className="container main-section">
       <div className="row">
         <div className="col-sm-8">
-        <h1 className="text-center headline">New York Times</h1>
-          <h4 className="text-center headline">Vesti o Srbiji</h4>
+          <h1 className="headline">New York Times</h1>
+          <h4 className="headline">Vesti o Srbiji</h4>
+        </div>
+        <div className="col-sm-4">
+          <h1 className="headline">Hacker News API</h1>
+          <h4 className="headline">Search: redux</h4>
         </div>
       </div>
       <div className="row justify-content-center">
@@ -43,7 +47,8 @@ function App() {
         </div>
         <div className="col-sm-4 sidebar">
           <br></br>
-          <HackerNews/>
+          <div className="weather"><HackerNews/></div>
+          
         </div>
       </div>
       
