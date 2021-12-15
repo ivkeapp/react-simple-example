@@ -1,38 +1,65 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap');
+
+/* HEADER */
+html, body {
+  background-color: #eeeeee;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header {
+  height: 80px;
+  background-color: #111111;
+  color: aliceblue;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.menu-items {
+  list-style-type: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.menu-items li {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.menu-right {
+  margin: 8px;
+}
+
+.menu-left {
+  height: 60px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 8px;
 }
 
-.App-link {
-  color: #61dafb;
+/* FOOTER */
+
+footer {
+  height: 50px;
+  background-color: #111111;
+  color: aliceblue;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.text-date {
+  font-size: 11px;
+  color: #808080;
+}
+
+.article {
+  background-color: white;
+  margin-bottom: 80px;
+  padding: 30px;
+}
+
+.weather {
+  background-color: white;
+  margin-bottom: 80px;
+  padding: 30px;
+}
+
+.main-section {
+  background-color: #eeeeee;
+}
+
+.headline {
+  margin-top: 20px;
 }
