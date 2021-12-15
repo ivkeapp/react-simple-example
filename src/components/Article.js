@@ -1,6 +1,22 @@
 import React from 'react'
+import {useState, useEffect} from "react";
 
-export default function Article({data}) {
+export default function Article() {
+
+    const [data, setArticleData] = useState([]);
+
+    const fetchArticleData = async () =>  {
+      return await fetch("https://api.nytimes.com/svc/semantic/v2/concept/name/nytd_geo/Serbia?fields=article_list&api-key=tn9ksrf9EzaNRCVwnIsQnIhItLHHf7a4")
+            .then((response) => response.json())
+            .then((data) => setArticleData(data.results[0].article_list.results));
+    }
+    
+  
+    useEffect(() => {
+      document.body.style.backgroundColor = "#eeeeee";
+      fetchArticleData();
+    }, []);
+
     return (
            <div>{data.map((article, index) => (
                <div className="article" key={index}>

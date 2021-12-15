@@ -1,26 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {useState, useEffect} from "react";
 import Time from './components/utils/Time';
 import Article from './components/Article';
-import Weather from './components/Weather';
+import HackerNews from './components/Weather';
 
 function App() {
   
-  const [articleData, setArticleData] = useState([]);
+  // const [articleData, setArticleData] = useState([]);
 
-  const fetchArticleData = async () =>  {
-    return await fetch("https://api.nytimes.com/svc/semantic/v2/concept/name/nytd_geo/Serbia?fields=article_list&api-key=YOURKEY")
-          .then((response) => response.json())
-          .then((data) => setArticleData(data.results[0].article_list.results));
-  }
+  // const fetchArticleData = async () =>  {
+  //   return await fetch("https://api.nytimes.com/svc/semantic/v2/concept/name/nytd_geo/Serbia?fields=article_list&api-key=tn9ksrf9EzaNRCVwnIsQnIhItLHHf7a4")
+  //         .then((response) => response.json())
+  //         .then((data) => setArticleData(data.results[0].article_list.results));
+  // }
   
 
-  useEffect(() => {
-    document.body.style.backgroundColor = "#eeeeee";
-    fetchArticleData();
-  }, []);
+  // useEffect(() => {
+  //   document.body.style.backgroundColor = "#eeeeee";
+  //   fetchArticleData();
+  // }, []);
 
   
   return (
@@ -54,11 +53,11 @@ function App() {
       <div className="row justify-content-center">
         <div className="col-sm-8 ">
           <br></br>
-          <Article data={articleData}/>
+          <Article/>
         </div>
         <div className="col-sm-4 sidebar">
           <br></br>
-          <Weather/>
+          <HackerNews/>
         </div>
       </div>
       
