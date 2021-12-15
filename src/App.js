@@ -11,7 +11,7 @@ function App() {
   const [articleData, setArticleData] = useState([]);
 
   const fetchArticleData = async () =>  {
-    return await fetch("https://api.nytimes.com/svc/semantic/v2/concept/name/nytd_geo/Serbia?fields=article_list&api-key=tn9ksrf9EzaNRCVwnIsQnIhItLHHf7a4")
+    return await fetch("https://api.nytimes.com/svc/semantic/v2/concept/name/nytd_geo/Serbia?fields=article_list&api-key=YOURKEY")
           .then((response) => response.json())
           .then((data) => setArticleData(data.results[0].article_list.results));
   }

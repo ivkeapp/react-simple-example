@@ -5,15 +5,16 @@ export default function Weather() {
 
     const [weatherData, setWeatherData] = useState([]);
 
-    const fetchWeatherData = async () =>  {
-        return await fetch("https://api.openweathermap.org/data/2.5/weather?q=Belgrade&units=metric&lang=hr&appid=f2b96f6f33777b4db1b2214c6e17db22")
+    const fetchWeatherData = () =>  {
+        return fetch("https://api.openweathermap.org/data/2.5/weather?q=Belgrade&units=metric&lang=hr&appid=YOURKEY")
               .then((response) => response.json())
               .then((data) => {setWeatherData(data); console.log(data)});
       }
     
     useEffect(() => {
-        fetchWeatherData();
-    }, []);
+        setInterval(fetchWeatherData(), 5000)
+        //fetchWeatherData();
+    });
 
     return (
         <div className="weather"><p>Vremenski uslovi: &nbsp;
